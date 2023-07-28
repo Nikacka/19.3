@@ -1,0 +1,13 @@
+import requests
+
+username: "avaliable"
+url = f'https://petstore.swagger.io/v2/findByStatus{username}'
+headers = {
+    'accept': 'application/json'}
+
+
+r = requests.delete(url, headers=headers, params=params)
+
+print('удаляем пользователя, код статус', r.status_code)
+print(r.text)
+print("-")
