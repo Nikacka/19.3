@@ -1,0 +1,21 @@
+import requests
+
+url = 'https://petstore.swagger.io/v2/pet'
+
+headers = {
+    'accept': 'application/json',
+    'Content-Type': 'application/json'
+}
+
+data = {
+ "id": 0,
+  "petId": 0,
+  "quantity": 0,
+  "shipDate": "2023-07-26T21:23:44.790Z",
+  "status": "placed",
+  "complete": true
+}
+
+res = requests.get(url, headers=headers, params=params)
+print(response.status_code)
+print(response.json())
